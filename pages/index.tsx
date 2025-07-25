@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Sen } from "next/font/google";
 import Hero from "@/components/Hero/Hero";
 import Header from "@/components/Header/Header";
 import WriteMe from "@/components/WriteMe/WriteMe";
+import Footer from "@/components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function Home() {
         <Header />
         <Hero />
         <WriteMe />
+        <Footer />
       </QueryClientProvider>
     </div>
   );
