@@ -1,7 +1,8 @@
-import Image from "next/image";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Geist, Geist_Mono, Sen } from "next/font/google";
 import Hero from "@/components/Hero/Hero";
 import Header from "@/components/Header/Header";
+import WriteMe from "@/components/WriteMe/WriteMe";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,13 +20,18 @@ const sen = Sen({
   weight: ["400", "700"], // Add weights you need
 });
 
+const queryClient = new QueryClient();
+
 export default function Home() {
   return (
     <div
       className={`${sen.className} ${geistSans.className} ${geistMono.className} font-sans min-h-screen `}
     >
-      <Header />
-      <Hero />
+      <QueryClientProvider client={queryClient}>
+        <Header />
+        <Hero />
+        <WriteMe />
+      </QueryClientProvider>
     </div>
   );
 }
