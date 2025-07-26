@@ -4,7 +4,7 @@ import Section from "../helper/Section";
 const HeroContent = () => {
   return (
     <Section
-      extraStyles="flex flex-col items-center gap-4 py-12 min-[768px]:w-[408px]  min-[768px]:ml-[-36px] min-[768px]:pr-10 "
+      extraStyles="flex flex-col items-center gap-4 min-[768px]:w-[408px]  min-[768px]:ml-[-36px] min-[768px]:pr-10 "
       extraPaddings="min-[768px]:p-0"
     >
       <h1 className="min-[360px]:w-[320px] min-[768px]:w-[408px]">
