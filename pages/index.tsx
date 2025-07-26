@@ -4,6 +4,9 @@ import Hero from "@/components/Hero/Hero";
 import Header from "@/components/Header/Header";
 import WriteMe from "@/components/WriteMe/WriteMe";
 import Footer from "@/components/Footer/Footer";
+import Experience from "@/components/Experience/Experience";
+import Philosophy from "@/components/Philosophy/Philosophy";
+import Skillset from "@/components/Skillset/Skillset";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +34,9 @@ export default function Home() {
       <QueryClientProvider client={queryClient}>
         <Header />
         <Hero />
+        <Experience />
+        <Philosophy />
+        <Skillset />
         <WriteMe />
         <Footer />
       </QueryClientProvider>
