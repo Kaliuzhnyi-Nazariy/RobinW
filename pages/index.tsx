@@ -7,6 +7,7 @@ import Footer from "@/components/Footer/Footer";
 import Experience from "@/components/Experience/Experience";
 import Philosophy from "@/components/Philosophy/Philosophy";
 import Skillset from "@/components/Skillset/Skillset";
+import Sponsors from "@/components/Sponsors/Sponsors";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function Home() {
         <Experience />
         <Philosophy />
         <Skillset />
+        <Sponsors />
         <WriteMe />
         <Footer />
       </QueryClientProvider>
