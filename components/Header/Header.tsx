@@ -4,7 +4,10 @@ import Section from "../helper/Section";
 
 const Header = () => {
   return (
-    <Section extraStyles="w-full h-[72px] bg-transparent flex justify-between items-center min-md:h-[88px] ">
+    <Section
+      extraStyles="w-full h-[72px] bg-transparent flex justify-between items-center min-md:h-[88px] "
+      changedYPadding="p-0"
+    >
       <h1>Robin.W</h1>
       <div className="w-6 h-6 bg-white hidden max-md:block"></div>
       <nav className="hidden min-md:block">
