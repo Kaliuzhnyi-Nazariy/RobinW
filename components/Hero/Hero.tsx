@@ -3,7 +3,7 @@ import Photo from "./Photo";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col min-[768px]:flex-row min-[768px]:pt-20 min-[768px]:pb-[84px]  ">
+    <div className="flex flex-col min-[768px]:flex-row min-[768px]:pt-20 min-[768px]:pb-[84px] min-[1440px]:pt-[78px]  ">
       <Photo />
       <HeroContent />
     </div>
