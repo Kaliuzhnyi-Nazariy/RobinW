@@ -28,7 +28,7 @@ const ProjectItem = ({
         alt={project.title}
         width={320}
         height={400}
-        className="w-full min-[768px]:max-h-[620px] min-[768px]:h-[620px] object-cover "
+        className="w-full h-[400px] min-[768px]:max-h-[620px] min-[768px]:h-[620px] object-cover "
       />
       <div className="py-10 px-8">
         <h3>{project.title}</h3>
