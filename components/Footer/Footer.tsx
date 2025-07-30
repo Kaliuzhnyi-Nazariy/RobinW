@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <Section extraStyles="bg-[var(--levelOne)] grid min-[768px]:grid-rows-[minmax(48px,_1fr)] min-[768px]:grid-cols-4 min-[768px]:pt-20 min-[768px]:pb-14 ">
         <div className="min-[768px]:row-span-1">
-          <h1>Robin.W</h1>
+          <Image src="/Logo.svg" alt="Robin.W" width={131} height={40} />
           <ul className="mt-8 flex gap-4">
             <li>
               <a href="https://x.com/" target="_blank">
