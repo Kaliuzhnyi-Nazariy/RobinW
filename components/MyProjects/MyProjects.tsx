@@ -5,7 +5,10 @@ import ProjectItem from "./ProjectItem";
 
 const MyProjects = () => {
   return (
-    <Section changedYPadding="pt-[120px] pb-[153px] flex flex-col min-[1440px]:grid gap-12 min-[1440px]:grid-cols-2 min-[1440px]:grid-rows-[repeat(5,1fr)] ">
+    <Section
+      changedYPadding="pt-[120px] pb-[153px] flex flex-col min-[1440px]:grid gap-12 min-[1440px]:grid-cols-2 min-[1440px]:grid-rows-[repeat(5,1fr)] "
+      id="Work"
+    >
       <div className="row-span-1">
         <p className=" text-[16px] text-[var(--lightGrey)] uppercase font-bold ">
           my projects

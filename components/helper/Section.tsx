@@ -6,18 +6,24 @@ const Section = ({
   extraPaddings,
   changedYPadding,
   isDiv = false,
+  changedXPadding,
+  id,
 }: {
   children: React.ReactNode;
   extraStyles?: string;
   extraPaddings?: string;
   changedYPadding?: string;
   isDiv?: boolean;
+  changedXPadding?: string;
+  id?: string;
 }) => {
   return (
     <>
       {isDiv ? (
         <div
-          className={`px-1.5 min-[360px]:px-5 ${
+          className={` ${
+            changedXPadding ? changedXPadding : "px-1.5 min-[360px]:px-5"
+          } ${
             changedYPadding ? changedYPadding : "py-12 min-[768px]:py-20 "
           }  ${extraStyles} ${
             extraPaddings
@@ -29,6 +35,7 @@ const Section = ({
         </div>
       ) : (
         <section
+          id={id}
           className={`px-1.5 min-[360px]:px-5 ${
             changedYPadding ? changedYPadding : "py-12 min-[768px]:py-20 "
           }  ${extraStyles} ${

@@ -3,7 +3,7 @@ import Section from "../helper/Section";
 
 const Experience = () => {
   return (
-    <Section>
+    <Section id="Experience">
       <p className=" text-[16px] text-[var(--lightGrey)] uppercase font-bold ">
         work experience
       </p>
