@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import FormField from "./FormField";
 import { IMessage } from "@/pages/api/interfacesAndTypes";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { postMessage } from "@/pages/api/addMessage";
 
 const Form = () => {
@@ -22,6 +22,8 @@ const Form = () => {
 
   const [able, setAble] = useState(false);
   const [isMessageShown, setMessageShown] = useState(false);
+  const [isErrorShown, setErrorShown] = useState(false);
+  const [isErrorMessage, setErrorMessage] = useState("Something went wring!");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -40,13 +42,15 @@ const Form = () => {
     }
   }, [formData.email, formData.message, formData.name]);
 
-  const { mutate, isPending, isError, isSuccess } = useMutation({
+  const { mutate, isPending } = useMutation({
     mutationFn: (formData: IMessage) => postMessage(formData),
-    onSuccess(data) {
-      console.log(data);
+    onSuccess() {
+      clearData();
+      successBackdropMessage();
     },
-    onError(error) {
-      console.error(error);
+    onError(error: { message: string }) {
+      setErrorShown(true);
+      setErrorMessage(error.message);
     },
   });
 
@@ -63,10 +67,6 @@ const Form = () => {
         onSubmit={async (e) => {
           e.preventDefault();
           mutate(formData);
-          if (isSuccess) {
-            clearData();
-            successBackdropMessage();
-          }
         }}
         className="mt-12 flex flex-col gap-10 relative min-[768px]:w-[332px] min-[768px]:m-0 min-[1440px]:w-[526px] "
       >
@@ -74,6 +74,13 @@ const Form = () => {
           {isMessageShown ? (
             <div className="fixed w-full h-full bg-[rgba(0,0,0,0.5)] text-white flex justify-center items-center top-0 left-0">
               <p className="opacity-100">Message sent!</p>
+            </div>
+          ) : (
+            <></>
+          )}
+          {isErrorShown ? (
+            <div className="absolute bg-[rgb(219,73,73)] text-white flex justify-center items-center top-2 right-2">
+              <p className="opacity-100">{isErrorMessage}</p>
             </div>
           ) : (
             <></>
