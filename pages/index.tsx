@@ -11,6 +11,8 @@ import Sponsors from "@/components/Sponsors/Sponsors";
 import MyProjects from "@/components/MyProjects/MyProjects";
 import Instagram from "@/components/Instagram/Instagram";
 import Dribbble from "@/components/Dribbble/Dribbble";
+import Reviews from "@/components/Reviews/Reviews";
+import Photography from "@/components/Photography/Photography";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +47,8 @@ export default function Home() {
         <MyProjects />
         <Instagram />
         <Dribbble />
+        <Reviews />
+        <Photography />
         <WriteMe />
         <Footer />
       </QueryClientProvider>
