@@ -13,6 +13,7 @@ import Instagram from "@/components/Instagram/Instagram";
 import Dribbble from "@/components/Dribbble/Dribbble";
 import Reviews from "@/components/Reviews/Reviews";
 import Photography from "@/components/Photography/Photography";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,9 @@ export default function Home() {
     <div
       className={`${sen.className} ${geistSans.className} ${geistMono.className} font-sans min-h-screen `}
     >
+      <Head>
+        <title>Robin.W</title>
+      </Head>
       <QueryClientProvider client={queryClient}>
         <Header />
         <Hero />
